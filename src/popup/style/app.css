@@ -1,0 +1,292 @@
+body {
+  line-height: 1 !important;
+}
+
+h2 {
+  margin: 0;
+  font-size: 16px;
+}
+ul {
+  margin: 0;
+  padding: 0 0 0 1.5em;
+}
+li {
+  margin: 1.5em 0;
+  padding: 0;
+}
+a {
+  color: darkgrey !important;
+}
+b {
+  /* used for event dates/times */
+  margin-right: 3px;
+  font-size: 9px;
+  font-weight: lighter;
+}
+.demo-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+  width: 360px;
+}
+.demo-app-sidebar {
+  line-height: 1.5;
+  padding-right: 1px;
+}
+.demo-app-sidebar-section {
+  padding: 0.5em 2em;
+}
+.demo-app-main {
+  flex-grow: 1;
+  padding: 1.5em 2em 1em 2em;
+  font-size: 12px;
+}
+.fc {
+  /* the calendar root */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.fc-timegrid-slot-minor {
+  border-top: 0px !important;
+}
+
+.fc-timegrid-slot {
+  height: 3px !important;
+  line-height: 3px !important;
+  padding: 0 !important;
+}
+
+.fc-scrollgrid-section table {
+  height: 0em;
+}
+
+.fc-timegrid-slot-label {
+  border-top: none !important;
+}
+
+.fc table {
+  font-size: 0.9em;
+  border-top: none !important;
+  border-left: none !important;
+}
+
+.fc-theme-standard td {
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.fc-theme-standard th {
+  border: none !important;
+}
+
+.fc-button {
+  color: #2c3e50 !important;
+  background-color: #fff !important;
+  border: none !important;
+}
+
+.fc-daygrid-body {
+  height: 20px !important;
+  border-collapse: collapse !important;
+  overflow-y: hidden !important;
+}
+
+.fc-timegrid-axis-frame-liquid {
+  height: 20px !important;
+}
+
+.fc-timegrid-axis-frame {
+  height: 20px !important;
+  align-items: top !important;
+}
+
+.fc-timegrid-divider {
+  padding: 0 !important;
+}
+
+#time-list {
+  height: 7.5em;
+  padding: 0.3em 1em;
+  margin-bottom: 1em;
+  overflow: auto;
+  background-color: #6dbcfc2c;
+  cursor: default;
+  border-radius: 10px;
+}
+
+#copy-text {
+  font-weight: lighter;
+  color: black;
+  font-size: 10px;
+}
+
+.icon {
+  cursor: pointer !important;
+  margin: 0em 0.5em;
+}
+
+.icon-section {
+  position: fixed;
+  right: 10%;
+}
+
+/* Customize the label (the container) */
+.radio-container {
+  position: relative;
+  cursor: pointer;
+  font-size: 10px;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 30px;
+  background-color: white;
+  border-radius: 30px;
+  border: 1px solid darkgrey;
+  padding: 0 10px;
+}
+
+.checkmark:hover {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+  background-color: #6dbcfc !important;
+  border: 1px solid #6dbcfc;
+}
+
+.checkbox-container {
+  position: relative;
+  cursor: pointer;
+  font-size: 10px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-custom {
+  top: 0;
+  left: 0;
+  margin-right: 3px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 1px 6.5px;
+  border: 1px solid darkgrey;
+}
+
+.checkbox-container input:checked ~ .checkbox-custom {
+  box-shadow: inset 0px 0px 0px 4.5px #6dbcfc;
+  border: 1px solid #6dbcfc;
+}
+
+.sidebar-buttons {
+  padding: 0.3em 3em;
+  font-size: 10px !important;
+}
+
+#right-buttons {
+  margin-left: 3.8em;
+  font-size: 1em;
+}
+
+#bottom-row-buttons {
+  padding: 1em 3em;
+  font-size: 10px;
+}
+
+.sidebar-buttons input {
+  vertical-align: text-bottom !important;
+}
+
+i {
+  color: white;
+}
+
+.fc-bg-event {
+  padding-top: 3px;
+  border-radius: 3px;
+  opacity: 1 !important;
+}
+
+.fc-col-header-cell-cushion {
+  width: 20px;
+}
+
+.fc-scrollgrid-sync-inner {
+  text-align: center;
+}
+
+.fc-event {
+  overflow: hidden;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 50px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4px 2px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  font-size: 12px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+}
+
+#placeholder {
+  font-style: italic;
+  font-size: 9px;
+  opacity: 0.8;
+}

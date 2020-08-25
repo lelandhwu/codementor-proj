@@ -1,0 +1,34 @@
+{
+  "key": "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDVMz8gBlgsDWshvP8UPjkEXJhG2Ds0tmHfLn3jomeYCeBvV3thz4kiFFblg5jBagiQeAQiRU+wVGT5WOFKlB7iC3aI85Im1SBz6eZwCmGKOdWnmlFb55wHibqd4b6MGYkHkAwhfNR2ERe67XbEO5wjL/K4ShCjSNl7aO7G2tHl0IoHVhSNZEDnnoIttf0pA7OKpnMkGaDGrIZLMBCQ+Md0wyIEPaXVZwWC2kRrxWfHVr8bzOAA56I2xKWgfjEEc7UKFBlK6oNd6O6k7pBrNHHs+wE6TH8unJiDKqfGEpYvi6/l5ocFOMTtGLDIO+BMgSXIeAelA+4NoV7cW6WBQ1wbAgMBAAECggEAKqxCtsi+TjbzWgHntmgL5oUYD5oJI7Bbn53BIdZoUMStUOvcLMQq6RDUIcU4xoHQLAZxoWBpJlyGB2iUU2aZVdpAhAHon3AqOjk3X/ab9lxEGPNo1HHjx5h4K1C7YHRd+o8I9ozzQ5yBOO99xaI+ysY2mU9tzBjxOuPSYyf6OjqpUx/OZBM9VsBlWDqcTfQWDq793PJ9lT3g/IHde83UVWI2dJoFvrW9mx+JGkgKLfN34pYjfx7XepOIqeoAs6Iu1Yt6RwBO1pBFQsBjOkYK5fn7R7RftHwPC8tgZ9CmbP3lkyfrBXktNdDYUxO4AnWynfdeS3HHS/FJs3onyVjHMQKBgQDug5hK1GZckmtJR2Mdx9sl++ad7qaQWp7NJwNDBEIDHByHTr1FYqvw4srVhWIjOioQ6sN25e06nmbpSyO24u6aKxN5/F2BExtYI8GhxEOvEzmvc4Tx+EQJ2NZE37gxWZwUut8rIiLbSWdmSGYKOrxTGUkkw/zGdqtUYQ6k/4DiqwKBgQDk1JBfyGWj5DVHgULta4OENEhJhlsFG6sV2BhZtav2VQeaABJ8UnYk6fbbtumbOMjrFIOHn4sLgE2DZZFiAbEVr2gjXxbBYoDG1deoaUPRSEGwq0JRd5Kd1QMvvDAZI/RMZBzpKjUdcc8Mz6KQ80frbWKyJsRCV3lj1v/FuZLsUQKBgQDYJmndZp9dRVP1FLy+QGBaC+7zMVPBfl5rjO9nzHQGXXN9K95bAxDPPLiUyEwnoI5+xkJdfgF/Hg4lXfL/yqhxDpiX9BzI3IfrWHwiHbs47jNYzVet8U+3nMqRoC1Mi+jm4HNeo5DzKZKLHxFaM+B3bnLa3sI1GVYrIcojvWkQAQKBgAsV/TSWuc3Z1Xb0XTCxX7q86a+eMbSqpXw2bt+RvJX/gpHEZSDewdiB+TKlxuV9N8ajxMeCRDM3cQnnlsZ/vHuHdu0Xwzt1MTXw0DTZfK6b6IrNkTXvLAw3cKMUY+Qj6Mb2pqvpHo+hnt1JBeAt2RMfxoNI+4MXR8s9dEC4/9QxAoGBAKl23pPR4IRdN6grRZ3ESXmSDgRxdvkuvivFlx+7soV+zuuTw5glox4u6QvyWxfD6URDnRVEdGUW25/kPYVsMbVxxH7mA5UZjXDeVX2bte/T+xvXX+AWzx75PzFUXppXryxsSjqqBcw/tmyKfB+RFIs5ej1kh63ni4W0J7domISL",
+  "name": "availabilities-chrome",
+  "description": "A Vue.js web extension",
+  "version": null,
+  "manifest_version": 2,
+  "oauth2": {
+    "client_id": "603830134694-nhr7ojps7q2kajs85rivhc81ntm995fj.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.events.readonly"
+    ]
+  },
+  "icons": {
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "availabilities-chrome",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": true
+  },
+  "permissions": [
+  "identity"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://apis.google.com/js/api.js; object-src 'self'"
+}

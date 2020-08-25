@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/availabilities/availability-api/availabilityguide";
+
+package availabilityguide;
+
+service AvailabilityGuide {
+    // Authenticates a client using Google OAuth.
+    //
+    // params:
+    //      AuthCode: 
+    // returns:
+    //      Token: 
+    rpc Authenticate(AuthCode) returns (Token);
+
+    rpc List(CalendarRequest) returns (CalendarResponse);
+}
+
+message AuthCode {
+    bytes Code = 1;
+}
+
+message Token {
+    string AccessToken = 1;
+    string TokenType = 2;
+    string RefreshToken = 3;
+    google.protobuf.Timestamp Expiry = 4;
+}
+
+message CalendarRequest {
+    Token Token = 1;
+    string Calendar = 2;
+
+    google.protobuf.Timestamp StartDate = 3;
+    google.protobuf.Timestamp EndDate = 4;
+
+    google.protobuf.Timestamp StartTime = 5;
+    google.protobuf.Timestamp EndTime = 6;
+    int32 TimeZone = 7;
+}
+
+message CalendarItem {
+    string Id = 1;
+
+    // Status of the event: {confirmed, tentative, cancelled}
+    string Status = 2;
+
+    string HtmlLink = 3;
+
+    google.protobuf.Timestamp Created = 4;
+    google.protobuf.Timestamp Updated = 5;
+
+    // Title of the event
+    string Summary = 6;
+
+    string Description = 7;
+    string Location = 8;
+    string ColorId = 9;
+
+    google.protobuf.Timestamp Start = 10;
+    google.protobuf.Timestamp End = 11;
+    string TimeZone = 12;
+}
+
+message CalendarResponse {
+    int32 Status = 1;
+    repeated CalendarItem Events = 2;
+    string Error = 3;
+}
